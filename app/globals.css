@@ -27,20 +27,6 @@
   position: relative;
   text-shadow: 0 0 6px black;
 }
-/* {
-  padding:0px;
-  white-space: pre-wrap;
-  height: 100px;
-  width: ;
-  margin:0px;
-  text-shadow: 
-  0 0 1px green,
-  0 0 2px green,
-  0 0 3px green,
-  0 0 4px green,
-  0 0 5px green,
-  0 0 6px green,
-} */
 .designed-line{
   background-color: #ffab00;
   width: 60px;
@@ -66,8 +52,20 @@
   filter: blur(2px);
   -webkit-filter: blur(2px);
 }
-/* .image-wrapper img{
-  background-color: rgba(0,0,0, 0.4);
+.contact-form,
+.contact-image{
+  flex: 1;
+}
+.input-field{
+  padding: 15px;
+  width: 100%;
+  /* outline: 3px solid #ffab00; */
+}
+.input-div:not(:last-child){
+  margin-bottom: 40px;
+}
+/* .input-div textarea.input-field{
+  margin-bottom: 20px;
 } */
 @media screen and (max-width:1500px) and (min-width:1000px) {
   .intro-section{
