@@ -1,5 +1,6 @@
 import Nav from '@/components/nav/Nav'
-import './globals.css'
+import './globals.css';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
   title: 'Create Next App',

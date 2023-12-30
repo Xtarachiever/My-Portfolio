@@ -2,6 +2,7 @@
 import React from "react";
 import { useFormik } from "formik";
 import ValidateContactUs from "@/lib/validate";
+import { ToastContainer, toast } from 'react-toastify';
 
 const Contact = () => {
   const formik = useFormik({
@@ -14,14 +15,26 @@ const Contact = () => {
     onSubmit,
   });
 
-  const submitFormData = async (values) => {
-    console.log(values)
-  };
   async function onSubmit(values) {
-    await submitFormData(values)
+    const data = await fetch('/api/contact', {
+      method: 'POST',
+      body:  JSON.stringify(values)
+    });
+
+    if(data.ok){
+      toast.success("Email submitted successfully",{
+        position: toast.POSITION.TOP_RIGHT
+      });
+      formik.resetForm();
+    }else{
+      toast.error("Check Network Connection",{
+        position: toast.POSITION.TOP_RIGHT
+      });
+    }
   }
   return (
     <div className="flex flex-col sm:flex-row items-center">
+      <ToastContainer />
       <div className="contact-image">
         <img src="/contact-us.png" alt="contact-me" />
       </div>
