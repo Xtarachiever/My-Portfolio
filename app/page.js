@@ -24,7 +24,7 @@ const Home = () => {
         </div>
         <div className='intro-section'>
           <p className='intro'><span>Introduction</span></p>
-          <p className='pt-3 pb-6 text-md sm:text-2xl md:text-3xl'>Web Developer and Developer, Based in Nigeria</p>
+          <p className='pt-3 pb-6 text-md sm:text-2xl md:text-3xl'>Web Developer, Based in Lagos, Nigeria</p>
           <p className='pb-5'>I am a very dedicated and hard working person. 
             I am also a great team worker and always do my best to get better at what I do.
           </p>

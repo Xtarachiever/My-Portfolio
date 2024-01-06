@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+.projects-container{
+    /* width: 50%; */
+    max-width: 480px;
+}
+.projects-wrapper .sections{
+    background-color: #001233;
+    border: 2px solid #ffab00;
+    height: 40vh;
+    width: 100%;
+    /* max-width: 500px; */
+    position: relative;
+    cursor: pointer;
+}
+.projects-wrapper .sections:hover{
+    scale: 1.01;
+    box-shadow: 2px 1px 10px #ffab00;
+    transition: all .2s ease-in-out;
+}
+.projects-wrapper .sections .inner-box{
+    width: 75%;
+    background-color: #384064;
+    height: 70%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.projects-wrapper .sections .inner-box p{
+    font-family: 'Train One', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    color: #ffab00;
+}
+.projects-wrapper .app-details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.projects-container .app-details .participation{
+    font-size: 12px;
+}
+.projects-container .app-details .participation p:last-child{
+    margin-top: 7px;
+}
+.projects-container .app-details .participation span,
+.projects-wrapper .stacks span{
+    font-size: 10px;
+    color: #ffab00;
+    border: 1px solid #ffab00;
+    border-radius: 50px;
+    padding: 2px 6px;
+    margin-left: 5px;
+}
+.projects-wrapper .stacks{
+    flex-wrap: wrap;
+    display: flex;
+    width: fit-content;
+}
+.projects-wrapper .details,
+.projects-wrapper .stacks{
+    margin-top: 10px;
+}
+.link-div{
+    width: auto;
+    justify-content: center;
+}
+.link-div svg{
+    margin: 10px 5px;
+}

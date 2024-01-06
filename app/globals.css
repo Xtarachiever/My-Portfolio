@@ -64,15 +64,20 @@
 .input-div:not(:last-child){
   margin-bottom: 40px;
 }
-/* .input-div textarea.input-field{
-  margin-bottom: 20px;
-} */
+.all-projects-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px 20px;
+}
 @media screen and (max-width:1500px) and (min-width:1000px) {
   .intro-section{
     max-width: 400px;
   }
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1150px) {
+  .all-projects-container{
+    grid-template-columns: 1fr 1fr;
+  }
   .main-div{
     grid-template-columns: auto;
   }
@@ -90,5 +95,12 @@
   .image-wrapper{
     min-width: 250px;
     top: -70px;
+  }
+}
+
+@media screen and (max-width:760px) {
+  .all-projects-container{
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
 }
