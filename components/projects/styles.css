@@ -37,6 +37,10 @@
     justify-content: space-between;
     margin-top: 10px;
 }
+.projects-wrapper .app-details .title{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
 .projects-container .app-details .participation{
     font-size: 12px;
 }

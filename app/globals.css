@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 .layout-wrapper{
-  width: 80vw;
+  width: 90vw;
+  min-width: 300px;
 }
 .icons{
   display: flex;
@@ -78,12 +79,6 @@
   .all-projects-container{
     grid-template-columns: 1fr 1fr;
   }
-  .main-div{
-    grid-template-columns: auto;
-  }
-  .intro-section{
-    margin-top: 50px;
-  }
   .intro span{
     font-size: 2rem;
   }
@@ -93,14 +88,27 @@
     height: 3px;
   }
   .image-wrapper{
-    min-width: 250px;
+    min-width: 200px;
     top: -70px;
   }
 }
-
+@media screen and (max-width:820px) {
+  .main-div{
+    grid-template-columns: auto;
+  }
+  .intro-section{
+    margin-top: 50px;
+  }
+}
 @media screen and (max-width:760px) {
   .all-projects-container{
     grid-template-columns: 1fr;
     justify-items: center;
+  }
+}
+
+@media screen and (max-width:300px) {
+  .layout-wrapper{
+    padding: 10px 20px;
   }
 }
