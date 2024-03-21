@@ -29,7 +29,7 @@ const Home = () => {
             I am also a great team worker and always do my best to get better at what I do.
           </p>
           <Link href={'/'}>
-            <span className='items-center'>
+            <span className='items-center my_story'>
                 <span className='pr-5 inline'>My Story</span>
                 <BsArrowRight fontSize={'1.4rem'} className='inline'/>
             </span>

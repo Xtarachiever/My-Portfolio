@@ -70,6 +70,27 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 20px;
 }
+.my_story:hover{
+  color: #ffab00;
+}
+.my_story:hover svg{
+  animation: arrow_animation .7s;
+  animation-iteration-count: infinite;
+}
+@keyframes arrow_animation {
+  0%{
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(5px);
+  }
+  75%{
+    transform: translateX(10px);
+  }
+  100%{
+    transform: translateX(14px);
+  }
+}
 @media screen and (max-width:1500px) and (min-width:1000px) {
   .intro-section{
     max-width: 400px;
@@ -95,6 +116,7 @@
 @media screen and (max-width:820px) {
   .main-div{
     grid-template-columns: auto;
+    margin-bottom: 20px;
   }
   .intro-section{
     margin-top: 50px;

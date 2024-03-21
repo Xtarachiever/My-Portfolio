@@ -13,7 +13,9 @@ const Nav = () => {
   return (
     <div className='wrapper'>
         <div>
-          <FaLaptopCode fontSize={'4rem'} className='text-orange'/>
+          <Link href={'/'}>
+            <FaLaptopCode fontSize={'4rem'} className='text-orange'/>
+          </Link>
         </div>
         {/* Desktop view */}
         <div className='hidden sm:flex justify-evenly w-[60%] items-center text-white'>
