@@ -1,11 +1,53 @@
+"use client";
+import { useRef } from "react";
 import Project from "@/components/projects/Project";
-import React from "react";
+import { useIntersection } from "react-use";
+import gsap, { Power3} from "gsap";
 
 const Projects = () => {
+  const projectSectionRef = useRef(null);
+
+  const intersection = useIntersection(projectSectionRef,{
+    root:null,
+    rootMargin:"0px",
+    threshold: 0.5
+  });
+
+  const fadeIn = element=>{
+    gsap.from(element,.5,{
+      opacity:0,
+      x:40,
+      ease:Power3.easeOut,
+      stagger:{
+        amount:0.3
+      }
+    })
+    gsap.to(element,.5,{
+      opacity:1,
+      x:0,
+      ease:Power3.easeOut,
+      stagger:{
+        amount:0.3
+      }
+    })
+  }
+
+  // const fadeOut = element=>{
+  //   gsap.to(element,1,{
+  //     opacity:0,
+  //     y:-60,
+  //     ease:'power4.out',
+  //     stagger:{
+  //       amount:0.3
+  //     }
+  //   })
+  // }
+
+  intersection && intersection.intersectionRatio < 0.5 && fadeIn('.all-projects-container')
   return (
     <div className="text-white">
       <p className="text-[30px]">My Works</p>
-      <div className="all-projects-container">
+      <div className="all-projects-container" ref={projectSectionRef}>
         <Project
           number={"#1"}
           name={"To do list"}

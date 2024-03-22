@@ -50,17 +50,23 @@
 }
 .image-wrapper{
   z-index: 1;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+  filter: blur(1.4px);
+  -webkit-filter: blur(1.4px);
 }
 .contact-form,
 .contact-image{
   flex: 1;
 }
+.contact-image{
+  opacity: 0;
+}
 .input-field{
   padding: 15px;
   width: 100%;
   /* outline: 3px solid #ffab00; */
+}
+.contact-form{
+  opacity: 0;
 }
 .input-div:not(:last-child){
   margin-bottom: 40px;
@@ -69,6 +75,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px 20px;
+  opacity: 0;
 }
 .my_story:hover{
   color: #ffab00;
@@ -93,7 +100,7 @@
 }
 @media screen and (max-width:1500px) and (min-width:1000px) {
   .intro-section{
-    max-width: 400px;
+    max-width: 600px;
   }
 }
 @media screen and (max-width:1150px) {

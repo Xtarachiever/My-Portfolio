@@ -1,8 +1,11 @@
 "use client";
-import React from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import { useFormik } from "formik";
 import ValidateContactUs from "@/lib/validate";
 import { ToastContainer, toast } from 'react-toastify';
+import gsap, { Power3 } from "gsap";
+import { useIntersection } from "react-use";
+
 
 const Contact = () => {
   const formik = useFormik({
@@ -32,13 +35,73 @@ const Contact = () => {
       });
     }
   }
+
+  const contactSectionRef = useRef(null);
+  const inputSectionRef = useRef(null);
+
+  const intersection = useIntersection(contactSectionRef,{
+    root:null,
+    rootMargin:"0px",
+    threshold: 0.5
+  });
+
+  const intersection1 = useIntersection(inputSectionRef,{
+    root:null,
+    rootMargin:"0px",
+    threshold: 0.5
+  });
+
+    const fadeIn = element=>{
+      gsap.from(element,1,{
+        opacity:0,
+        y:-40,
+        ease:Power3.easeOut,
+        stagger:{
+          amount:0.3
+        }
+      })
+      gsap.to(element,1,{
+        opacity:1,
+        y:0,
+        ease:Power3.easeOut,
+        stagger:{
+          amount:0.3
+        }
+      })
+    }
+  
+    const slideUp = element=>{
+      gsap.from(element,1,{
+        opacity:0,
+        y:40,
+        ease:Power3.easeOut,
+        stagger:{
+          amount:0.3
+        }
+      })
+      gsap.to(element,1,{
+        opacity:1,
+        y:0,
+        ease:Power3.easeOut,
+        stagger:{
+          amount:0.3
+        }
+      })
+    }
+
+    useLayoutEffect(()=>{
+      intersection && intersection.intersectionRatio > 0 && fadeIn('.contact-image')
+    intersection1 && intersection.intersectionRatio > 0 && slideUp('.contact-form')
+    },[intersection,intersection1])
+
+
   return (
     <div className="flex flex-col sm:flex-row items-center">
       <ToastContainer />
-      <div className="contact-image">
+      <div className="contact-image" ref={contactSectionRef}>
         <img src="/contact-us.png" alt="contact-me" />
       </div>
-      <div className="contact-form sm:ml-5 w-full">
+      <div className="contact-form sm:ml-5 w-full" ref={inputSectionRef}>
         <form method="POST" onSubmit={formik.handleSubmit}>
           <div className="w-full input-div">
             <input
