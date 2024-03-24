@@ -1,11 +1,10 @@
 "use client";
 import { useIntersection } from "react-use";
-import gsap,{ Power3 } from "gsap";
+import {gsap, Power3 } from "gsap";
 import { useRef } from "react";
 
 const WorkExperiences = () => {
   const experienceSectionRef = useRef(null);
-  const timelineSectionRef = useRef(null);
 
   const intersection = useIntersection(experienceSectionRef,{
     root:null,
@@ -32,21 +31,21 @@ const WorkExperiences = () => {
     })
   }
 
-  var tl = gsap.timeline({
-    scrollTrigger:{
-        trigger:'checkpoint',
-        markers:true,
-        // start:"80%",
-        // end:"top 0%",
-        // scrub:1,
+//   var tl = gsap.timeline({
+//     scrollTrigger:{
+//         trigger:'checkpoint',
+//         markers:true,
+//         // start:"80%",
+//         // end:"top 0%",
+//         // scrub:1,
         
-    }
-  });
-    tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
-    tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
+//     }
+//   });
+//     tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
+//     tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
 
-    tl.from(".checkpoint-even", {translateX:'50vw', duration: 1,opacity:0});
-    tl.to(".checkpoint-even", { duration: 1, translateX:'0em',opacity:1});
+//     tl.from(".checkpoint-even", {translateX:'50vw', duration: 1,opacity:0});
+//     tl.to(".checkpoint-even", { duration: 1, translateX:'0em',opacity:1});
 
   intersection && fadeIn('.introduction-div')
   return (
