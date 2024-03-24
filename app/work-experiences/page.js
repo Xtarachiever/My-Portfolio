@@ -6,6 +6,8 @@ import { useRef } from "react";
 const WorkExperiences = () => {
   const experienceSectionRef = useRef(null);
 
+  gsap.registerPlugin(ScrollTrigger);
+
   const intersection = useIntersection(experienceSectionRef,{
     root:null,
     rootMargin:"0px",
