@@ -42,6 +42,7 @@ const WorkExperiences = () => {
     //     scrub:1,
         
     // }
+    repeat:1
   });
     tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
     tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
