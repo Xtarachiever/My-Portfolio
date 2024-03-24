@@ -161,15 +161,17 @@
 .checkpoint:nth-child(even):before{
   right: 0px;
 }
-
-
+/* 
+.introduction-div{
+  opacity: 0;
+} */
 @media screen and (max-width:1150px) {
   .timelines{
     width: 80vw;
   }
   .timelines .checkpoint:nth-child(even),
   .timelines .checkpoint:nth-child(odd){
-    transform: translateX(0px);
+    transform: translateX(0px) !important;
     border: none;
   }
 

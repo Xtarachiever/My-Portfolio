@@ -1,21 +1,71 @@
-import React from "react";
+"use client";
+import { useIntersection } from "react-use";
+import gsap,{ Power3 } from "gsap";
+import { useRef } from "react";
 
 const WorkExperiences = () => {
+  const experienceSectionRef = useRef(null);
+  const timelineSectionRef = useRef(null);
+
+  const intersection = useIntersection(experienceSectionRef,{
+    root:null,
+    rootMargin:"0px",
+    threshold: 0.5
+  });
+
+  const fadeIn = element=>{
+    gsap.from(element,1,{
+      opacity:0,
+      y:-100,
+      ease:Power3.easeOut,
+      stagger:{
+        amount:0.3
+      }
+    })
+    gsap.to(element,1,{
+      opacity:1,
+      y:0,
+      ease:Power3.easeOut,
+      stagger:{
+        amount:0.3
+      }
+    })
+  }
+
+  var tl = gsap.timeline({
+    scrollTrigger:{
+        trigger:'checkpoint',
+        markers:true,
+        // start:"80%",
+        // end:"top 0%",
+        // scrub:1,
+        
+    }
+  });
+    tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
+    tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
+
+    tl.from(".checkpoint-even", {translateX:'50vw', duration: 1,opacity:0});
+    tl.to(".checkpoint-even", { duration: 1, translateX:'0em',opacity:1});
+
+  intersection && fadeIn('.introduction-div')
   return (
     <div className="text-white">
-      <p>Work Experiences Timeline</p>
-      <div className="leading-8">
-        <br />
-          In addition to my development
-          skills, I am also a skilled graphics designer, capable of creating
-          captivating visuals to complement my web projects. Throughout my
-          career, I have gained valuable experience through internships and
-          roles as a software developer for various startups and companies. I am
-          committed to delivering high-quality solutions that exceed
-          expectations and drive user engagement. Some of these startups are listed below:
+        <div className="introduction-div" ref={experienceSectionRef}>
+            <p className="lg:text-xl">Work Experiences Timeline</p>
+            <div className="leading-8">
+            <br />
+            In addition to my development
+            skills, I am also a skilled graphics designer, capable of creating
+            captivating visuals to complement my web projects. Throughout my
+            career, I have gained valuable experience through internships and
+            roles as a software developer for various startups and companies. I am
+            committed to delivering high-quality solutions that exceed
+            expectations and drive user engagement. Some of these startups are listed below:
+            </div>
         </div>
       <div className="timelines">
-        <div className="checkpoint">
+        <div className="checkpoint checkpoint-odd">
           <div>
             <p>Royal grocery shoppa</p>
             <p className="text-[#ffd000] font-500">Role: Software Developer</p>
@@ -29,7 +79,7 @@ const WorkExperiences = () => {
             </p>
           </div>
         </div>
-        <div className="checkpoint">
+        <div className="checkpoint checkpoint-even">
           <div>
             <p>Hotels.ng (HNGi8)</p>
             <p>Role: Intern</p>
@@ -40,7 +90,7 @@ const WorkExperiences = () => {
             </p>
           </div>
         </div>
-        <div className="checkpoint">
+        <div className="checkpoint checkpoint-odd">
           <div>
             <p>DevPlacement (UKTechHub)</p>
             <p>Role: Intern</p>
@@ -50,7 +100,7 @@ const WorkExperiences = () => {
             </p>
           </div>
         </div>
-        <div className="checkpoint">
+        <div className="checkpoint checkpoint-even">
           <div>
             <p>Engineering Career Expo (ECX)</p>
             <p>Role: Graphics Designers</p>
@@ -60,7 +110,7 @@ const WorkExperiences = () => {
             </p>
           </div>
         </div>
-        <div className="checkpoint">
+        <div className="checkpoint checkpoint-odd">
           <div>
             <p>Carettop</p>
             <p>Role: Wordpress Developer</p>

@@ -93,12 +93,12 @@ const Home = () => {
           adept at utilizing CSS frameworks like Bootstrap and Tailwind CSS to
           create visually appealing designs. 
           </p>
-          <Link href={'/'}>
-            <span className='items-center my_story'>
-                <Link href={'/work-experiences'}><span className='pr-5 inline'>My Story</span></Link>
+            <p className='items-center my_story'>
+                <Link href={'/work-experiences'}>
+                  <span className='pr-5 inline'>My Story</span>
+                </Link>
                 <BsArrowRight fontSize={'1.4rem'} className='inline'/>
-            </span>
-          </Link>
+            </p>
         </div>
       </div>
     </div>
