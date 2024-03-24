@@ -85,8 +85,13 @@ const Home = () => {
         <div className='intro-section' ref={introSectionRef}>
           <p className='intro'><span>Introduction</span></p>
           <p className='pt-3 pb-6 text-md sm:text-2xl md:text-3xl'>Web Developer, Based in Lagos, Nigeria</p>
-          <p className='pb-5'>I am a graduate at the University of Lagos from the department of Chemical Engineering. I am currently pursing a career in Software development.
-            I am also a great team worker and always do my best to get better at what I do.
+          <p className='pb-5 leading-8'>I am Esther Adeyemi, a Chemical Engineering graduate from the
+          University of Lagos with a passion for front-end development. With
+          over four years of experience, I specialize in building engaging user
+          interfaces using technologies such as React.js, Next.js, and
+          TypeScript. I am proficient in database management with MongoDB and
+          adept at utilizing CSS frameworks like Bootstrap and Tailwind CSS to
+          create visually appealing designs. 
           </p>
           <Link href={'/'}>
             <span className='items-center my_story'>

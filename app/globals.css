@@ -98,6 +98,83 @@
     transform: translateX(14px);
   }
 }
+
+/* timeline */
+.timelines{
+  /* position: absolute;
+  left: 50%;
+  transform: translateX(-50%); */
+  max-width: 34.15em;
+  margin: 5em auto;
+}
+.timelines .checkpoint{
+  padding-bottom: 2em;
+  padding-top: 2em;
+  max-width: 34em;
+  position: relative;
+}
+.timelines .checkpoint div{
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.timelines .checkpoint:nth-child(even){
+  border-right: 3px solid #888;
+  padding-right: 3em;
+  transform: translateX(-17em);
+}
+.timelines .checkpoint:nth-child(odd){
+  border-left: 3px solid #888;
+  padding-left: 3em;
+  transform: translateX(16.8em);
+}
+.timelines .checkpoint div:before{
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.timelines .checkpoint:nth-child(even) div:before{
+  right: -0.5em;
+}
+.timelines .checkpoint:nth-child(odd) div:before{
+  left: -0.5em;
+}
+.checkpoint:nth-child(odd):before,
+.checkpoint:nth-child(even)::before{
+  content: '';
+  background: #888;
+  width: 3em;
+  height: 3px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checkpoint:nth-child(odd):before{
+  left: 0px;
+}
+.checkpoint:nth-child(even):before{
+  right: 0px;
+}
+
+
+@media screen and (max-width:1150px) {
+  .timelines{
+    width: 80vw;
+  }
+  .timelines .checkpoint:nth-child(even),
+  .timelines .checkpoint:nth-child(odd){
+    transform: translateX(0px);
+    border: none;
+  }
+
+}
+
 @media screen and (max-width:1500px) and (min-width:1000px) {
   .intro-section{
     max-width: 600px;
