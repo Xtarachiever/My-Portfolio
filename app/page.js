@@ -84,7 +84,7 @@ const Home = () => {
         </div>
         <div className='intro-section' ref={introSectionRef}>
           <p className='intro'><span>Introduction</span></p>
-          <p className='pt-3 pb-6 text-md sm:text-2xl md:text-3xl'>Web Developer, Based in Lagos, Nigeria</p>
+          <p className='pt-3 pb-6 text-md sm:text-2xl md:text-3xl'>Web Developer, <br />Based in Lagos, Nigeria</p>
           <p className='pb-5 leading-8'>I am Esther Adeyemi, a Chemical Engineering graduate from the
           University of Lagos with a passion for front-end development. With
           over four years of experience, I specialize in building engaging user
