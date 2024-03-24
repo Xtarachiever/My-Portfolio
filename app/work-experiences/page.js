@@ -1,13 +1,12 @@
 "use client";
 import { useIntersection } from "react-use";
 import {gsap, Power3 } from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+// import ScrollTrigger from "gsap/src/ScrollTrigger";
 import { useRef } from "react";
 
 const WorkExperiences = () => {
+    // gsap.registerPlugin(ScrollTrigger);
   const experienceSectionRef = useRef(null);
-
-  gsap.registerPlugin(ScrollTrigger);
 
   const intersection = useIntersection(experienceSectionRef,{
     root:null,
@@ -41,7 +40,7 @@ const WorkExperiences = () => {
     //     start:0,
     //     scrub:1,
         
-    // }
+    // },
     repeat:1
   });
     tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
