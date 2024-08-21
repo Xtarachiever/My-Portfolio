@@ -1,11 +1,9 @@
 "use client";
 import { useIntersection } from "react-use";
 import {gsap, Power3 } from "gsap";
-// import ScrollTrigger from "gsap/src/ScrollTrigger";
 import { useRef } from "react";
 
 const WorkExperiences = () => {
-    // gsap.registerPlugin(ScrollTrigger);
   const experienceSectionRef = useRef(null);
 
   const intersection = useIntersection(experienceSectionRef,{
@@ -33,27 +31,19 @@ const WorkExperiences = () => {
     })
   }
 
-  var tl = gsap.timeline({
-    // scrollTrigger:{
-    //     trigger:'.checkpoint',
-    //     markers:false,
-    //     start:0,
-    //     scrub:1,
-        
-    // },
-    repeat:1
-  });
-    tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
-    tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
+  // var tl = gsap.timeline({
+  // });
+  //   tl.from(".checkpoint-odd", {translateX:'50vw', duration: 1,opacity:0});
+  //   tl.to(".checkpoint-odd", { duration: 1, translateX:'16.8em',opacity:1});
 
-    tl.from(".checkpoint-even", {translateX:'50vw', duration: 1,opacity:0});
-    tl.to(".checkpoint-even", { duration: 1, translateX:'0em',opacity:1});
+  //   tl.from(".checkpoint-even", {translateX:'50vw', duration: 1,opacity:0});
+  //   tl.to(".checkpoint-even", { duration: 1, translateX:'0em',opacity:1});
 
   intersection && fadeIn('.introduction-div')
   return (
     <div className="text-white">
         <div className="introduction-div" ref={experienceSectionRef}>
-            <p className="lg:text-xl">Work Experiences Timeline</p>
+            <p className="lg:text-xl font-semibold text-[rgb(255,171,0)]">Work Experiences Timeline</p>
             <div className="leading-8">
             <br />
             In addition to my development
@@ -83,7 +73,7 @@ const WorkExperiences = () => {
         <div className="checkpoint checkpoint-even">
           <div>
             <p>Hotels.ng (HNGi8)</p>
-            <p>Role: Intern</p>
+            <p className="text-[#ffd000] font-500">Role: Intern</p>
             <p>
               Participated in the hotels.ng 8 training and became a finalist. I
               Played a pivotal role in spearheading the creation and
@@ -94,7 +84,7 @@ const WorkExperiences = () => {
         <div className="checkpoint checkpoint-odd">
           <div>
             <p>DevPlacement (UKTechHub)</p>
-            <p>Role: Intern</p>
+            <p className="text-[#ffd000] font-500">Role: Intern</p>
             <p>
               Led the development of the site as the frontend developer (intern)
               using React.js, JavaScript, CSS and HTML.
@@ -104,7 +94,7 @@ const WorkExperiences = () => {
         <div className="checkpoint checkpoint-even">
           <div>
             <p>Engineering Career Expo (ECX)</p>
-            <p>Role: Graphics Designers</p>
+            <p className="text-[#ffd000] font-500">Role: Graphics Designers</p>
             <p>
               I joined the ECX and NSChE Graphics Team, making designs for the
               different activities.
@@ -114,7 +104,7 @@ const WorkExperiences = () => {
         <div className="checkpoint checkpoint-odd">
           <div>
             <p>Carettop</p>
-            <p>Role: Wordpress Developer</p>
+            <p className="text-[#ffd000] font-500">Role: Wordpress Developer</p>
             <p>
               I a full blown website using wordpress and plugins like
               layerslider, WP gallery and more, which added a smooth running

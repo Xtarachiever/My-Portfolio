@@ -88,7 +88,7 @@ const Home = () => {
           <p className='pb-5 leading-8'>I am Esther Adeyemi, a Chemical Engineering graduate from the
           University of Lagos with a passion for front-end development. With
           over four years of experience, I specialize in building engaging user
-          interfaces using technologies such as React.js, Next.js, and
+          interfaces using technologies such as React.js, Next.js, Nodejs, and
           TypeScript. I am proficient in database management with MongoDB and
           adept at utilizing CSS frameworks like Bootstrap and Tailwind CSS to
           create visually appealing designs. 

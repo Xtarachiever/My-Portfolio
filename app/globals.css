@@ -165,6 +165,57 @@
 .introduction-div{
   opacity: 0;
 } */
+.timelines .checkpoint-odd{
+  animation: slide_in .4s ease-in forwards;
+  opacity: 0;
+}
+@keyframes slide_in {
+  0%{
+    opacity: 0;
+    transform: translateX(0em);
+  }
+  25%{
+    opacity: 0.25;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  75%{
+    opacity: 0.75;
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(16.8em);
+  }
+}
+
+.timelines .checkpoint-even{
+  animation: slide_in_even .4s ease-in forwards;
+  opacity: 0;
+}
+@keyframes slide_in_even {
+  0%{
+    opacity: 0;
+    transform: translateX(0em);
+  }
+  25%{
+    opacity: 0.25;
+    transform: translateX(-7em);
+  }
+  50%{
+    opacity: 0.5;
+    transform: translateX(-10em);
+  }
+  75%{
+    opacity: 0.75;
+    transform: translateX(-15em);
+  }
+  100%{
+    opacity: 1;
+    transform: translateX(-17em);
+  }
+}
+
 @media screen and (max-width:1150px) {
   .timelines{
     width: 80vw;

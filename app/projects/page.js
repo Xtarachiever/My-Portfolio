@@ -66,11 +66,11 @@ const Projects = () => {
           role={"Developer"}
           client={"Internship application test"}
           github={'https://github.com/Xtarachiever/lendsqr-fe-test'}
-          livelink={'https://lendsqr-zeta.vercel.app/'}
+          livelink={'https://esther-adeyemi-lendsqr-fe-test.netlify.app/login'}
           details={
             "I participated in the lendersqr frontend assestment test and built this site following the design template provided. This site shows the dashboard of a lender's company admin, which gives details on the users, loans taken and more."
           }
-          stacks={['ReactJS', 'Typescript', 'Tailwindcss','Jest testing library']}
+          stacks={['ReactJS', 'Typescript', 'Vite', 'Tailwindcss','Jest testing library']}
         />
         <Project
           number={"#3"}
@@ -78,7 +78,7 @@ const Projects = () => {
           role={"Developer"}
           client={"Hackathon"}
           github={'https://github.com/Xtarachiever/getlinked_'}
-          livelink={'getlinked-hackathon-git-xtarachiever-xtarachiever.vercel.app/'}
+          livelink={'https://getlinked-hackathon-git-xtarachiever-xtarachiever.vercel.app/'}
           details={
             "I participated in the getlinked hackathon. Getlinked is all about solving real-world problems, pushing the boundaries of technology, and creating solutions that can change the world, that's what we're all about!"
           }
@@ -143,6 +143,18 @@ const Projects = () => {
           stacks={['HTML', 'CSS', 'JS']}
           livelink={'https://xtarachiever.github.io/JSMINNA/Task9/html_pages/index.html'}
           github={'https://github.com/Xtarachiever/JSMINNA'}
+        />
+        <Project
+          number={"#9"}
+          name={"Muse Mingle"}
+          role={"Developer"}
+          client={"Personal Project"}
+          details={
+            "I took on a personal project to make a blog website. This website has features of add a blog, updating a blog, saving a draft as a writer. You can also access the number of views for a particular blog."
+          }
+          stacks={['Nextjs', 'Tailwindss', 'MongoDB']}
+          livelink={'https://ebloggers.netlify.app'}
+          github={'https://github.com/Xtarachiever/blog-site'}
         />
       </div>
     </div>
