@@ -48,8 +48,32 @@ const Projects = () => {
     <div className="text-white">
       <p className="text-[30px]">My Works</p>
       <div className="all-projects-container" ref={projectSectionRef}>
-        <Project
+      <Project
           number={"#1"}
+          name={"Royal Grocery Shoppa Inventory"}
+          role={"Developer"}
+          client={"Personal Project"}
+          details={
+            "I took on a personal project to make an inventory that records and analyzes the sales and purchases made . It also provides the avenue to update each products and helps the manager see the summary of profits or loss accumulated"
+          }
+          stacks={['Nextjs', 'Tailwindss', 'MongoDB']}
+          livelink={'https://rgs-inventory.netlify.app/'}
+          github={'https://github.com/Xtarachiever/rgs-inventory'}
+        />
+        <Project
+          number={"#2"}
+          name={"Muse Mingle"}
+          role={"Developer"}
+          client={"Personal Project"}
+          details={
+            "I took on a personal project to make a blog website. This website has features of add a blog, updating a blog, saving a draft as a writer. You can also access the number of views for a particular blog."
+          }
+          stacks={['Nextjs', 'Tailwindss', 'MongoDB']}
+          livelink={'https://ebloggers.netlify.app'}
+          github={'https://github.com/Xtarachiever/blog-site'}
+        />
+        <Project
+          number={"#3"}
           name={"To do list"}
           role={"Developer"}
           client={"Personal Use"}
@@ -61,7 +85,7 @@ const Projects = () => {
           stacks={['HTML', 'CSS', 'Javascript']}
         />
         <Project
-          number={"#2"}
+          number={"#4"}
           name={"Lendersqr-fe-test"}
           role={"Developer"}
           client={"Internship application test"}
@@ -73,7 +97,7 @@ const Projects = () => {
           stacks={['ReactJS', 'Typescript', 'Vite', 'Tailwindcss','Jest testing library']}
         />
         <Project
-          number={"#3"}
+          number={"#5"}
           name={"GetLinked"}
           role={"Developer"}
           client={"Hackathon"}
@@ -85,7 +109,7 @@ const Projects = () => {
           stacks={['NextJS', 'Tailwindcss','Framer-motion']}
         />
         <Project
-          number={"#4"}
+          number={"#6"}
           name={"A SPA portfolio"}
           role={"Developer"}
           client={"Personal Use"}
@@ -97,7 +121,7 @@ const Projects = () => {
           github={'https://github.com/Xtarachiever/Portfolio'}
         />
         <Project
-          number={"#5"}
+          number={"#7"}
           name={"Sachomes"}
           role={"Intern"}
           client={"Small startup"}
@@ -109,7 +133,7 @@ const Projects = () => {
           github={'https://github.com/Xtarachiever/sachomes'}
         />
         <Project
-          number={"#6"}
+          number={"#8"}
           name={"Promptopia"}
           role={"Developer"}
           client={"Youtube Replicate"}
@@ -121,7 +145,7 @@ const Projects = () => {
           github={'https://github.com/Xtarachiever/promptopia_clone'}
         />
         <Project
-          number={"#7"}
+          number={"#9"}
           name={"Simple Calculator"}
           role={"Developer"}
           client={"Personal use"}
@@ -133,7 +157,7 @@ const Projects = () => {
           github={'https://github.com/Xtarachiever/Calculator'}
         />
         <Project
-          number={"#8"}
+          number={"#10"}
           name={"Easy bank page"}
           role={"Developer"}
           client={"Internship Task"}
@@ -143,18 +167,6 @@ const Projects = () => {
           stacks={['HTML', 'CSS', 'JS']}
           livelink={'https://xtarachiever.github.io/JSMINNA/Task9/html_pages/index.html'}
           github={'https://github.com/Xtarachiever/JSMINNA'}
-        />
-        <Project
-          number={"#9"}
-          name={"Muse Mingle"}
-          role={"Developer"}
-          client={"Personal Project"}
-          details={
-            "I took on a personal project to make a blog website. This website has features of add a blog, updating a blog, saving a draft as a writer. You can also access the number of views for a particular blog."
-          }
-          stacks={['Nextjs', 'Tailwindss', 'MongoDB']}
-          livelink={'https://ebloggers.netlify.app'}
-          github={'https://github.com/Xtarachiever/blog-site'}
         />
       </div>
     </div>
